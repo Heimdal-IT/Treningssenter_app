@@ -3,6 +3,7 @@ html{
 }
 body{
     height: auto;
+    margin: 0;
 }
 
 #navbar{
@@ -16,6 +17,6 @@ body{
 }
 nav{
     background-color: rgba(0,0,0,0.6);
-    width: 100%;
-    
+    width: 100vw;
+    padding: 10px 0 10px 0;
 }
