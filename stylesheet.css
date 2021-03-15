@@ -1,0 +1,21 @@
+html{
+    height: 100%;
+}
+body{
+    height: auto;
+}
+
+#navbar{
+    background-image: rgba(0,0,0,0.5);
+}
+.navSkrift{
+    margin: 0 25px 0 25px;
+}
+.right{
+    float: right;
+}
+nav{
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    
+}
