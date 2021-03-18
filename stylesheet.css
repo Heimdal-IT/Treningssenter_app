@@ -8,6 +8,7 @@ body{
 
 #navbar{
     background-image: rgba(0,0,0,0.5);
+    text-align: center;
 }
 .navSkrift{
     margin: 0 25px 0 25px;
@@ -15,8 +16,14 @@ body{
 .right{
     float: right;
 }
+.left{
+    float: left;
+}
 nav{
     background-color: rgba(0,0,0,0.6);
     width: 100vw;
     padding: 10px 0 10px 0;
+}
+#home{
+    margin-left: -2px;
 }
