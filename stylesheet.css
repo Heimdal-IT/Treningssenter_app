@@ -12,7 +12,9 @@ body{
 .navSkrift{
     margin: 0 25px 0 25px;
     text-decoration: none;
-    color: rgb(0,0,0);   
+    color: rgb(0,0,0);
+    position: relative;
+    top: 5px;
 }
 .right{
     float: right;
@@ -29,4 +31,15 @@ nav{
     height: 60px;
     position: relative;
     left: 23%;
+}
+
+.dropdownItem{
+  display:none;
+  position: absolute;
+    
+    
+}
+#navbar > *{
+    display: inline-block;
+    line-height: 60px;
 }
