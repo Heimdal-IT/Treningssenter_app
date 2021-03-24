@@ -4,8 +4,11 @@ html{
 body{
     height: auto;
     margin: 0;
+}
+#homeBody{
     background-image: url(unnamed.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .navSkrift{
     margin: 0 25px 0 25px;
@@ -47,4 +50,8 @@ nav{
 #navbar > *{
     display: inline-block;
     line-height: 70px;
+}
+#regDeg{
+    text-decoration: none;
+    color: rgb(0,0,0);
 }
