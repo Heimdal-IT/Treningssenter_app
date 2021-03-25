@@ -34,7 +34,6 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         
-        
         //Get Elements
         const txtEmail = document.getElementById('txtEmail');
         const txtPassword = document.getElementById('txtPassword');
@@ -49,23 +48,25 @@
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
+        
         //Sign in
         const promise = auth.signInWithEmailAndPassword(email,pass);
         promise.catch(e => console.log(e.message));
     });
 
-//Add signup event
+        //Add signup event
         btnSignup.addEventListener('click', e => {
             
-//Get email and pass
+        //Get email and pass
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
-//Sign in
+        
+        //Sign in
         const promise = auth.createUserWithEmailAndPassword(email,pass);
         promise.catch(e => window.alert(e.message));  
     });
-        
+          
         btnLogout.addEventListener('click', e => {
         firebase.auth().signOut();
     });
