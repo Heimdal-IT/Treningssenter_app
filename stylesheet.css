@@ -5,21 +5,19 @@ body{
     height: auto;
     margin: 0;
 }
-#homeBody{
-    background-image: url(unnamed.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+#navbar{
+    background-image: rgba(0,0,0,0.5);
+    position: fixed;
 }
 .navSkrift{
     margin: 0 25px 0 25px;
     text-decoration: none;
     color: rgb(0,0,0);
     position: relative;
-    top: 0;
+    top: 5px;
 }
 .right{
-    right: 10px;
-    position: absolute;
+    float: right;
 }
 .left{
     float: left;
@@ -27,31 +25,29 @@ body{
 nav{
     background-color: rgba(0,0,0,0.6);
     width: 100vw;
-    background-image: rgba(0,0,0,0.5);
-    position: fixed;
-    height: 70px;
-    display: flex;
+    padding: 10px 0 10px 0;
 }
 #home{
     height: 60px;
-    top: 5px;
+    position: relative;
+    left: 23%;
 }
-#home-a{
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    margin: 0;
-}
+
 .dropdownItem{
   display:none;
   position: absolute;
     
+    
 }
 #navbar > *{
     display: inline-block;
-    line-height: 70px;
+    line-height: 60px;
+    
+    
 }
-#regDeg{
-    text-decoration: none;
-    color: rgb(0,0,0);
+.infoBoks{
+    font-size: 50px;
+    position: relative;
+    
+    
 }
