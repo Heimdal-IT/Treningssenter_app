@@ -5,20 +5,38 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
-<body>
+
+<body id="homeBody">
     <nav id="navbar">
         <a id="info" class="navSkrift left" href="info.html">Mer informasjon</a>
         <a id="minSide" class="navSkrift left" href="minSide.html">Min side</a>
-        <a class="navSkrift" href="index.html"><img id="home" src="Home.button(1).png"></a>
-        <div class="dropdown"><a id="registrerDeg" class="navSkrift right">Logg inn</a><div class="dropdownItem"> <input><input><a>Registrer deg</a></div>        
-        </div>
-       
-        
+        <a class="navSkrift" id="home-a" href="index.html"><img id="home" src="Home.button(1).png"></a>
+        <!--<div class="dropdown"><a id="registrerDeg" class="navSkrift right">Logg inn</a><div class="dropdownItem"> <input><input><a>Registrer deg</a></div>        
+        </div>-->
+        <div class="dropdown1 right">
+            <div id="loggInn">
+                <button id="loggInnKnapp">
+                    <span>Logg inn</span>
+                </button>
+                <div id="loggInnDrop">
+                    <form>
+                        <div class="inpBox">
+                            <input id="Username" type="text" placeholder="Brukernavn">
+                        </div>
+                        <div class="inpBox">
+                            <input id="Password" type="text" placeholder="Passord">
+                        </div>
+                        <input id="btnLoggInn" type="submit" value="Log inn">
+                    </form>
+                    <div>
+                        <a href="" id="regDeg">Registrer deg</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
     </nav>
+
     
-
-
-
-
 </body>
 </html>

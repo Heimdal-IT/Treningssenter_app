@@ -5,19 +5,21 @@ body{
     height: auto;
     margin: 0;
 }
-#navbar{
-    background-image: rgba(0,0,0,0.5);
-    position: fixed;
+#homeBody{
+    background-image: url(unnamed.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .navSkrift{
     margin: 0 25px 0 25px;
     text-decoration: none;
     color: rgb(0,0,0);
     position: relative;
-    top: 5px;
+    top: 0;
 }
 .right{
-    float: right;
+    right: 10px;
+    position: absolute;
 }
 .left{
     float: left;
@@ -25,29 +27,37 @@ body{
 nav{
     background-color: rgba(0,0,0,0.6);
     width: 100vw;
-    padding: 10px 0 10px 0;
+    background-image: rgba(0,0,0,0.5);
+    position: fixed;
+    height: 70px;
+    display: flex;
 }
 #home{
     height: 60px;
-    position: relative;
-    left: 23%;
+    top: 5px;
 }
-
+#home-a{
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    margin: 0;
+}
 .dropdownItem{
   display:none;
   position: absolute;
     
-    
 }
 #navbar > *{
     display: inline-block;
-    line-height: 60px;
-    
-    
+    line-height: 70px;
 }
-.infoBoks{
-    font-size: 50px;
-    position: relative;
-    
-    
+#regDeg{
+    text-decoration: none;
+    color: rgb(0,0,0);
+} 
+#loggInnDrop{
+    background-color: rgb(255,255,255);
+    border-radius: 15px;
+    padding: 0 20px 0 20px;
+    margin-top: 15px;
 }
