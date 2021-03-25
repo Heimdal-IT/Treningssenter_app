@@ -6,7 +6,7 @@ body{
     margin: 0;
 }
 #homeBody{
-    background-image: url(unnamed.jpg);
+    background-image: url(Home%20background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -60,4 +60,5 @@ nav{
     border-radius: 15px;
     padding: 0 20px 0 20px;
     margin-top: 15px;
+    display: none;
 }
