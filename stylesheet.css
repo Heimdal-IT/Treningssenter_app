@@ -60,16 +60,5 @@ nav{
     border-radius: 15px;
     padding: 0 20px 0 20px;
     margin-top: 15px;
-    display: non;
-}
-.dropdown1{
-    margin-right: 5%;
-}
-#loggInnKnapp{
-    right: 5%;
-    position: absolute;
-}
-#loggInnKnapp dropdown1 right loggInn loggInnDrop inpBox {
-    position: absolute;
-    right: 10%;
+    display: none;
 }
