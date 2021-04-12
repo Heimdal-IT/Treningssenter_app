@@ -34,7 +34,6 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         
-        
         //Get Elements
         const txtEmail = document.getElementById('txtEmail');
         const txtPassword = document.getElementById('txtPassword');
@@ -49,113 +48,25 @@
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
+        
         //Sign in
         const promise = auth.signInWithEmailAndPassword(email,pass);
         promise.catch(e => console.log(e.message));
     });
 
-//Add signup event
+        //Add signup event
         btnSignup.addEventListener('click', e => {
             
-//Get email and pass
+        //Get email and pass
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
-//Sign in
+        
+        //Sign in
         const promise = auth.createUserWithEmailAndPassword(email,pass);
         promise.catch(e => window.alert(e.message));  
     });
-        
-        btnLogout.addEventListener('click', e => {
-        firebase.auth().signOut();
-    });
-        
-        
-//Add a realtime listener
-        firebase.auth().onAuthStateChanged(firebaseUser => {
-            
-            if(firebaseUser) {
-                console.log(firebaseUser);
-                document.getElementById("btnLogout").style.display = "block";
-            }   else {
-                console.log('not logged in');
-                document.getElementById("btnLogout").style.display = "none";
-            }
-    });
-        
-
-        
-      </script>
-  </body>
-</html>
-<DOCTYPE! html>
-<html>
-  <body>
-      
-        <div class="container">
-        <input id="txtEmail" type="email" placeholder="Email">
-        <br>
-        <input id="txtPassword" type="password" placeholder="Password">
-        <br>
-        <br>
-        <br>
-        <button id="btnLogin" class="btn btn-action">Log in</button>
-        <br>
-        <button id="btnSignup" class="btn btn-secondary" >Sign up</button>
-        <br>
-        <button id="btnLogout" class="btn btn-action">Log out</button>
           
-        </div>
-      
-        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
-        
-        <script>
-// Sett inn rikgit kode osv... 
-    var firebaseConfig = {
-        apiKey: "AIzaSyCnq8q_ANHM4MxaNUkkgo4PT6oeZyx4wCc",
-        authDomain: "treningsapp-efff1.firebaseapp.com",
-        projectId: "treningsapp-efff1",
-        storageBucket: "treningsapp-efff1.appspot.com",
-        messagingSenderId: "695882446099",
-        appId: "1:695882446099:web:8cb488731b1d87eca416e6"
-    };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        
-        
-        //Get Elements
-        const txtEmail = document.getElementById('txtEmail');
-        const txtPassword = document.getElementById('txtPassword');
-        const btnLogin = document.getElementById('btnLogin');
-        const btnSignup = document.getElementById('btnSignup');
-        const btnLogout = document.getElementById('btnLogout');
-        
-        //Add login event
-        btnLogin.addEventListener('click', e => {   
-        
-        //Get email and pass
-        const email = txtEmail.value;
-        const pass = txtPassword.value;
-        const auth = firebase.auth();
-        //Sign in
-        const promise = auth.signInWithEmailAndPassword(email,pass);
-        promise.catch(e => console.log(e.message));
-    });
-
-//Add signup event
-        btnSignup.addEventListener('click', e => {
-            
-//Get email and pass
-        const email = txtEmail.value;
-        const pass = txtPassword.value;
-        const auth = firebase.auth();
-//Sign in
-        const promise = auth.createUserWithEmailAndPassword(email,pass);
-        promise.catch(e => window.alert(e.message));  
-    });
-        
         btnLogout.addEventListener('click', e => {
         firebase.auth().signOut();
     });
