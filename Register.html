@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>Registrer deg</title>
+     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
-<body id="homeBody">
+<body>
     <nav id="navbar">
         <a id="info" class="navSkrift left" href="info.html">Mer informasjon</a>
         <a id="minSide" class="navSkrift left" href="minSide.html">Min side</a>
@@ -26,19 +26,20 @@
                         <div class="inpBox">
                             <input id="Password" type="text" placeholder="Passord" class="inpTxt">
                         </div>
-                        <input class="btnLoggInn" id="colorLogg" type="submit" value="Logg inn">
+                        <input id="btnLoggInn" type="submit" value="Logg inn">
                     </form>
                     <div>
-                        <a href="Register.html"><button class="btnLoggInn" id="colorReg">Registrer deg</button></a>
+                        <a href="" id="regDeg">Registrer deg</a>
                     </div>
                 </div>
             </div>
         </div>        
         </div>
     </nav>
-
     
 </body>
+
+
 <script>
  
     const loggInnKnapp = document.getElementById("loggInnKnapp");
@@ -58,8 +59,7 @@
     };
     //document.getElementById("loggInnKnapp").onclick = function() {dropdown()};
     loggInnKnapp.addEventListener("click", dropdown);
-    //window.onclick = function()
-    
+
 </script>
 
 </html>
