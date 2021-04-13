@@ -75,7 +75,7 @@ nav{
 }
 
 
-.spinningTittel{
+.tittel{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,12 +83,12 @@ nav{
     
 }
 
-.spinningTittel h1{
+.tittel h1{
     text-align: center;
     font-size: 3em;
 }
 
-.spinningTittel p{
+.tittel p{
     width: 80%;
     font-size: 2em;
 }
@@ -96,3 +96,4 @@ nav{
     margin: 100px 0px 0px 0px;
     position: absolute;
 }
+
