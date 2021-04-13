@@ -6,7 +6,7 @@
      <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
-<body>
+<body class="homeBody" id="regBody">
     <nav id="navbar">
         <a id="info" class="navSkrift left" href="info.html">Mer informasjon</a>
         <a id="minSide" class="navSkrift left" href="minSide.html">Min side</a>
@@ -36,6 +36,21 @@
         </div>        
         </div>
     </nav>
+    
+    
+    <div id="divContainer">
+        <main id="cm">
+            <h1>Lag bruker</h1>
+            <form>
+                <div id="divReg"><input id="firstName" type="text" placeholder="Fornavn" class="inpTxt">
+                <input id="surName" type="text" placeholder="Etternavn" class="inpTxt"></div>
+                <input id="regName" type="text" placeholder="Mail" class="regTxt inpTxt">
+                <input id="regPassword" type="text" placeholder="Passord" class="regTxt inpTxt">
+                <button class="colorReg btnLoggInn">Registrer deg</button>
+            </form>
+        </main>
+    </div>    
+    
     
 </body>
 

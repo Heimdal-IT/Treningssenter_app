@@ -9,29 +9,53 @@
      <nav id="navbar">
         <a id="info" class="navSkrift left" href="info.html">Mer informasjon</a>
         <a id="minSide" class="navSkrift left" href="minSide.html">Min side</a>
-        <a class="navSkrift" href="index.html"><img id="home" src="Home.button(1).png"></a>
-        <a id="registrerDeg" class="navSkrift right">Registrer deg</a>
-        <a id="logInn"class="navSkrift right">Logg inn</a>
+        <a class="navSkrift" href="index.html" id="home-a"><img id="home" src="Home.button(1).png"></a>
+        <div id="divKnapp"><button id="loggInnKnapp">
+                    Logg inn
+                </button>
+                <div class="dropdown1 right">
+            <div id="loggInn">
+                <div id="loggInnDrop">
+                    <form>
+                        <div class="inpBox">
+                            <input id="Username" type="text" placeholder="Brukernavn" class="inpTxt">
+                        </div>
+                        <div class="inpBox">
+                            <input id="Password" type="text" placeholder="Passord" class="inpTxt">
+                        </div>
+                        <input class="btnLoggInn" id="colorLogg" type="submit" value="Logg inn">
+                    </form>
+                    <div>
+                        <a href="Register.html"><button class="btnLoggInn colorReg" id="">Registrer deg</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        </div>
     </nav>
 
 
 </body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Min side</title>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-</head>
-<body>
-     <nav id="navbar">
-        <a id="info" class="navSkrift left" href="info.html">Mer informasjon</a>
-        <a id="minSide" class="navSkrift left" href="minSide.html">Min side</a>
-        <a class="navSkrift" href="index.html"><img id="home" src="Home.button(1).png"></a>
-        <a id="registrerDeg" class="navSkrift right">Registrer deg</a>
-        <a id="logInn"class="navSkrift right">Logg inn</a>
-    </nav>
-
-
-</body>
+<script>
+ 
+    const loggInnKnapp = document.getElementById("loggInnKnapp");
+    const loggInnDrop = document.getElementById("loggInnDrop");
+    let loginOpen = false;
+    
+    
+    
+    function dropdown() {
+           if(loginOpen){
+               loggInnDrop.style.display = "none";
+               loginOpen = false;
+            } else {
+                loggInnDrop.style.display = "block";
+                loginOpen = true;
+            };
+    };
+    //document.getElementById("loggInnKnapp").onclick = function() {dropdown()};
+    loggInnKnapp.addEventListener("click", dropdown);
+    //window.onclick = function()
+    
+</script>
 </html>
