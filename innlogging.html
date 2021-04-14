@@ -1,7 +1,7 @@
-
 <DOCTYPE! html>
 <html>
   <body>
+      
         <div class="container">
         <input id="txtEmail" type="email" placeholder="Email">
         <br>
@@ -14,13 +14,7 @@
         <button id="btnSignup" class="btn btn-secondary" >Sign up</button>
         <br>
         <button id="btnLogout" class="btn btn-action">Log out</button>
-        <br><br>
-        <input id="dato" type="date" placeholder="Dato">
-        <br>
-        <input id="tid" type="time" placeholder="Klokkeslett">
-        <br><br>
-        <input submit type="submit" onclick="submit_data()" value="Send inn!" id="submitknapp">
-        <input submit type="submit" onclick="slett_data()" value="Slett" id="slettknapp">     
+          
         </div>
       
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
@@ -28,114 +22,69 @@
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
         
         <script>
-            
-    // https://firebase.google.com/docs/reference/js/firebase.User
-            
-    // Sett inn rikgit kode osv... 
-        var firebaseConfig = {
-        apiKey: "AIzaSyAsgnjdnx1rAu9HdKZhp4yc2IZMod6t5sI",
-        authDomain: "bibliotek-578f0.firebaseapp.com",
-        databaseURL: "https://bibliotek-578f0.firebaseio.com",
-        projectId: "bibliotek-578f0",
-        storageBucket: "bibliotek-578f0.appspot.com",
-        messagingSenderId: "1098565713208",
-        appId: "1:1098565713208:web:1fb72f3b26fc9ee3aa15cd"
+// Sett inn rikgit kode osv... 
+    var firebaseConfig = {
+        apiKey: "AIzaSyCnq8q_ANHM4MxaNUkkgo4PT6oeZyx4wCc",
+        authDomain: "treningsapp-efff1.firebaseapp.com",
+        projectId: "treningsapp-efff1",
+        storageBucket: "treningsapp-efff1.appspot.com",
+        messagingSenderId: "695882446099",
+        appId: "1:695882446099:web:8cb488731b1d87eca416e6"
     };
-    // Initialize Firebase
+        // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         
-    //Henter elementer
+        
+        //Get Elements
         const txtEmail = document.getElementById('txtEmail');
         const txtPassword = document.getElementById('txtPassword');
         const btnLogin = document.getElementById('btnLogin');
         const btnSignup = document.getElementById('btnSignup');
         const btnLogout = document.getElementById('btnLogout');
-        const dato = document.getElementById('dato');
-        const tid = document.getElementById('tid');
         
-    //Login event
+        //Add login event
         btnLogin.addEventListener('click', e => {   
         
-    //Email og passord, log inn
+        //Get email and pass
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
-        
-    //Log inn
+        //Sign in
         const promise = auth.signInWithEmailAndPassword(email,pass);
         promise.catch(e => console.log(e.message));
     });
 
-    //Signup event
+//Add signup event
         btnSignup.addEventListener('click', e => {
             
-    //Email og passord, registrer
+//Get email and pass
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
-        
-    //Registrer
+//Sign in
         const promise = auth.createUserWithEmailAndPassword(email,pass);
         promise.catch(e => window.alert(e.message));  
     });
-    //Log ut      
+        
         btnLogout.addEventListener('click', e => {
         firebase.auth().signOut();
     });
         
         
-    //Real time listener, til database
+//Add a realtime listener
         firebase.auth().onAuthStateChanged(firebaseUser => {
-
+            
             if(firebaseUser) {
                 console.log(firebaseUser);
                 document.getElementById("btnLogout").style.display = "block";
-                document.getElementById("dato").style.display = "block";
-                document.getElementById("tid").style.display = "block";
-                document.getElementById("submitknapp").style.display = "block";
-                document.getElementById("slettknapp").style.display = "block";
-                
-        }   else {
+            }   else {
                 console.log('not logged in');
                 document.getElementById("btnLogout").style.display = "none";
-                document.getElementById("dato").style.display = "none";
-                document.getElementById("tid").style.display = "none";
-                document.getElementById("submitknapp").style.display = "none";
-                document.getElementById("slettknapp").style.display = "none";
-        }
-        });
+            }
+    });
+        
 
-        // Returnerer referansen av type Firebase.Database.Reference
-                function get_obj(){
-                    var database = firebase.database();
-                    let bibliotek = database.ref("bibliotek");
-                    const dato_in = document.getElementById("dato").value;
-                    const tid_in = document.getElementById("tid").value;
-                    return bibliotek.child(dato_in+"-"+tid_in); 
-        }
-            
-        // Sletter db objekt
-                function slett_data(){
-                    var new_object = get_obj()
-                    new_object.remove()
-                    const dato_in = document.getElementById("dato").value;
-                    const tid_in = document.getElementById("tid").value;
-                    window.alert("Du har slettet timen på "+dato_in+" klokken "+tid_in)
-        }
-
-        // Legger til db objekt
-                function submit_data(){
-                    var new_object = get_obj()
-                    const dato_in = document.getElementById("dato").value;
-                    const tid_in = document.getElementById("tid").value;
-                    const userEmail = firebase.auth().currentUser.email;
-                    new_object.set({
-                        Dato : dato_in , 
-                        Klokkeslett : tid_in ,
-                        Email : userEmail 
-                });
-                    window.alert("Du har reservert time på " + dato_in+" klokken " +tid_in);
-        }
+        
       </script>
   </body>
 </html>

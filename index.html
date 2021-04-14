@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon" href="ikon.ico">
+
 </head>
 
 <body class="homeBody">
@@ -24,7 +26,7 @@
                             <input id="Username" type="text" placeholder="Brukernavn" class="inpTxt">
                         </div>
                         <div class="inpBox">
-                            <input id="Password" type="text" placeholder="Passord" class="inpTxt">
+                            <input id="Password" type="password" placeholder="Passord" class="inpTxt">
                         </div>
                         <input class="btnLoggInn" id="colorLogg" type="submit" value="Logg inn">
                     </form>
@@ -46,7 +48,7 @@
     let loginOpen = false;
     
     
-    
+    //Får dropdown etter å ha trykket på logg inn.
     function dropdown() {
            if(loginOpen){
                loggInnDrop.style.display = "none";
@@ -56,9 +58,9 @@
                 loginOpen = true;
             };
     };
-    //document.getElementById("loggInnKnapp").onclick = function() {dropdown()};
+    //kjører function dropdown() ved å trykke på knappen
     loggInnKnapp.addEventListener("click", dropdown);
-    //window.onclick = function()
+
     
 </script>
 

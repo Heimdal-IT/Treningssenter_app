@@ -162,3 +162,8 @@ h1{
 #divReg{
     display: inline-block;
 }
+#password{
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+}
